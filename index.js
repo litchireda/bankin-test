@@ -79,8 +79,8 @@ async function Main() {
         accounts[x].transactions = accounts[x].transactions.filter((value, index, array) => array.findIndex(v=>(v.id===value.id)) === index);
     }
 
-    return accounts;
     console.log(util.inspect(accounts, {showHidden: false, depth: null}))
+    return accounts;
 };
 
 async function callApi(url, opts) {
